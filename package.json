@@ -1,16 +1,12 @@
 {
   "name": "test-sub",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
-  },
-  "dependencies": {
-    "vue": "^2.6.14"
+    "init": "npm install --registry=http://localhost:4873 && cd node_modules/test-main && npm install --registry=http://localhost:4873",
+    "serve": "cd node_modules/test-main && cross-env SERVE_APP_NAME=$npm_package_name SERVE_TYPE=single npm run serve"
   },
   "devDependencies": {
-    "@vue/cli-service": "~5.0.0",
-    "vue-template-compiler": "^2.6.14"
+    "test-main": "latest"
   }
 }
