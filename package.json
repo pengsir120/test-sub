@@ -1,7 +1,7 @@
 {
   "name": "test-sub",
   "version": "0.1.2",
-  "private": true,
+  "private": false,
   "scripts": {
     "init": "npm install --registry=http://localhost:4873 && cd node_modules/test-main && npm install --registry=http://localhost:4873",
     "serve": "cd node_modules/test-main && cross-env SERVE_APP_NAME=$npm_package_name SERVE_TYPE=single npm run serve"
